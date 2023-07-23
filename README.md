@@ -53,9 +53,6 @@ python manage.py startproject Books
 INSTALLED_APPS = [
     ...,
     'Books',
-    'rest_framework',
-    'django_filters',
-    'drf_yasg',
     ...,
 ]
 ```
@@ -72,24 +69,12 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-* Add URLs to your project's __urls.py__:
-
-```python
-from django.urls import include, path
-
-urlpatterns = [
-    ...,
-    path('book/',include('Api.urls')),,
-    ...,
-]
-```
-
 * Run your project:
 
 ```shell
 python manage.py runserver
 ```
 
-* Navigate to Project root view assigned in your project urlpatterns setting (typically http://127.0.0.1:8000/book/api
+* Navigate to Project root view assigned in your project urlpatterns setting (typically http://127.0.0.1:8000/
 if you followed this installation guide).
 * Use your superuser credentials to login.
