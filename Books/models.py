@@ -1,6 +1,11 @@
 from django.db import models
 from django.core.validators import FileExtensionValidator
 from django.contrib.auth.models import User
+from .validators import validate_file_size
+
+
+def nameFile(instance,filename):
+    return '/'.join(['Files',str(instance),filename])
 
 class Books(models.Model):
     class Category(models.TextChoices):
@@ -25,8 +30,8 @@ class Books(models.Model):
     category=models.CharField(choices=Category.choices,max_length=20,null=False,blank=False)
     language=models.CharField(choices=Languages.choices,max_length=20,null=False,blank=False)
     description=models.TextField(max_length=500,null=False,blank=False)
-    cover_image=models.ImageField(upload_to='images/',null=True,blank=True)
-    book_file=models.FileField(upload_to='Files/',validators=[FileExtensionValidator(['pdf'])])
+    cover_image=models.ImageField(upload_to=nameFile,null=True,blank=True,validators=[FileExtensionValidator(allowed_extensions=['jpeg','jpg', 'png',])])
+    book_file=models.FileField(upload_to=nameFile,null=True,blank=True,validators=[validate_file_size,FileExtensionValidator(allowed_extensions=['pdf'])])
     publication_date=models.DateTimeField(null=False,blank=False)
     publisher=models.ForeignKey(User,on_delete=models.CASCADE)
     create_on=models.DateTimeField(auto_now_add=True)

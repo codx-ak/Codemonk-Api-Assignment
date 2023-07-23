@@ -1,6 +1,9 @@
 from rest_framework import serializers
 from .models import Books
 
+# I write this example for 5 MB size limit for you
+MAX_UPLOAD_SIZE = "52"
+
 class BookSerializer(serializers.ModelSerializer):
     publisher=serializers.CharField(source='publisher.username',read_only=True)
     class Meta:
