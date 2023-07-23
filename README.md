@@ -160,3 +160,11 @@ URL :   http://127.0.0.1:8000/api/
 
 Assuming you are running your development server on the default port (8000) and the base URL is set to 'api/' in your project's urls.py file.
 You should see an interactive API documentation page showing your API endpoints, their methods (GET, POST, etc.), and the parameters they accept. The browsable API documentation allows you to test your API endpoints directly from the browser, making it convenient for both development and exploration.
+
+# API Documentation
+
+https://github.com/codx-paradise/Codemonk/blob/main/API%20Doc.md
+
+# Screenshots
+
+https://github.com/codx-paradise/Codemonk/tree/main/Screenshots
