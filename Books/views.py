@@ -4,10 +4,12 @@ from .permission import IsPublisher
 from .filters import BookFilter
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import filters,viewsets
+from .pagination import CustomPagination
 from django_filters.rest_framework import DjangoFilterBackend
 
-class PostView(viewsets.ModelViewSet):
+class BookViewSet(viewsets.ModelViewSet):
     permission_classes=[IsAuthenticated,IsPublisher]
+    pagination_class=CustomPagination
     queryset=Books.objects.all()
     serializer_class=PostSerializer
     filter_backends=[filters.SearchFilter,DjangoFilterBackend,filters.OrderingFilter]

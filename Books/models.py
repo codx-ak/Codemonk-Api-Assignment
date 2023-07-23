@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Books(models.Model):
     class Category(models.TextChoices):
-        Education = "Edcation", "Edcation"
+        Education = "Education", "Education"
         Mystery = "Mystery", "Mystery"
         Horror = "Horror", "Horror"
         Romance = "Romance", "Romance"
