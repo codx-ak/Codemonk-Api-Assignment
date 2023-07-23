@@ -90,6 +90,6 @@ urlpatterns = [
 python manage.py runserver
 ```
 
-* Navigate to Django Ledger root view assigned in your project urlpatterns setting (typically http://127.0.0.1:8000/book/api
+* Navigate to Project root view assigned in your project urlpatterns setting (typically http://127.0.0.1:8000/book/api
 if you followed this installation guide).
 * Use your superuser credentials to login.
