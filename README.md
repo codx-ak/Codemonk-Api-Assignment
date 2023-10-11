@@ -163,8 +163,8 @@ You should see an interactive API documentation page showing your API endpoints,
 
 # API Documentation
 
-https://github.com/codx-paradise/Codemonk/blob/main/API%20Doc.md
+https://github.com/codx-ak/Codemonk/blob/main/API%20Doc.md
 
 # Screenshots
 
-https://github.com/codx-paradise/Codemonk/tree/main/Screenshots
+https://github.com/codx-ak/Codemonk/tree/main/Screenshots
